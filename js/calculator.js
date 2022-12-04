@@ -61,8 +61,9 @@ function addData() {
     units = $("#quantity").val();
     currentCO2 = Number(parseFloat(units * co2PerUnit).toFixed(3));
     co2 += currentCO2;
+    co2 =  Number(parseFloat(co2).toFixed(3));
 
-    addRow($("#type option:selected").text(), $("#category option:selected").text(), co2PerUnit, units+" "+typeUnits[type], currentCO2);
+    addRow($("#type option:selected").text(), $("#category option:selected").text(), parseFloat(co2PerUnit).toFixed(3), units+" "+typeUnits[type], currentCO2);
 
     switch (type) {
         case 'electricity':
