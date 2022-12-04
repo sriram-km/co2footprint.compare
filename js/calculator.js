@@ -59,6 +59,7 @@ function addData() {
     var category = $("#category").val();
     co2PerUnit = jsonData[category];
     units = $("#quantity").val();
+    $("#quantity").val("");
     currentCO2 = Number(parseFloat(units * co2PerUnit).toFixed(3));
     co2 += currentCO2;
     co2 =  Number(parseFloat(co2).toFixed(3));
